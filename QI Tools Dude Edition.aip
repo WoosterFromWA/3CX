@@ -9,6 +9,7 @@
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
     <ROW Property="ARPNOMODIFY" MultiBuildValue="DefaultBuild:1"/>
     <ROW Property="ARPNOREPAIR" Value="1"/>
+    <ROW Property="ARPPRODUCTICON" Value="WindowSwitching.exe" Type="8"/>
     <ROW Property="Manufacturer" Value="Quest Integration"/>
     <ROW Property="ProductCode" Value="1033:{2D8889B3-EBC3-4948-BC5C-7A6D3025DB8B} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
@@ -164,7 +165,7 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
     <ROW Shortcut="CX" Directory_="CX_Dir" Name="3CX" Component_="CX.exe" Target="[#CX.exe]" Hotkey="0" Icon_="WindowSwitching.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
     <ROW Shortcut="CXDudeEdition" Directory_="CX_Dir" Name="3CXDUD~1|3CX Dude Edition" Component_="CXDudeEdition.exe" Target="[#CXDudeEdition.exe]" Hotkey="0" Icon_="WindowSwitching.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
-    <ROW Shortcut="CX_1" Directory_="StartupFolder" Name="3CX" Component_="CX.exe" Target="[#CX.exe]" Hotkey="0" Icon_="WindowSwitching.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="CXDudeEdition_1" Directory_="StartupFolder" Name="3CXDUD~1|3CX Dude Edition" Component_="CXDudeEdition.exe" Target="[#CXDudeEdition.exe]" Hotkey="0" Icon_="WindowSwitching.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
     <ROW Shortcut="GMSearch" Directory_="CX_Dir" Name="GMSearch" Component_="GMSearch.exe" Target="[#GMSearch.exe]" Hotkey="0" Icon_="WindowSwitching.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
     <ROW Shortcut="GMSearch_1" Directory_="StartupFolder" Name="GMSearch" Component_="GMSearch.exe" Target="[#GMSearch.exe]" Hotkey="0" Icon_="WindowSwitching.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
     <ROW Shortcut="HipChatScripts" Directory_="CX_Dir" Name="HIPCHA~1|HipChat Scripts" Component_="HipChatScripts.exe" Target="[#HipChatScripts.exe]" Hotkey="0" Icon_="WindowSwitching.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
