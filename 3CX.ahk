@@ -1,27 +1,50 @@
-^!\:: 											; ctrl+alt+\ switches to 3CX and readies it for number entry (if on number page)
-#SingleInstance, force
-
-if WinExist("ahk_exe 3CXWin8Phone.exe")
+3CXFocus(paste:=0)
 {
-	winid := WinExist("ahk_exe 3CXWin8Phone.exe")
-}
-
-if winid
-{
-	WinActivate
-	WinActivate
-	WinWaitActive, , , 1
-	If ErrorLevel
+	if WinExist("ahk_exe 3CXWin8Phone.exe")
 	{
-		MsgBox, 8208, Error, WinWaitActive Timed Out, cancelling
+		winid := WinExist("ahk_exe 3CXWin8Phone.exe")
+	}
+
+	if winid
+	{
+		WinActivate
+		WinActivate
+		WinWaitActive, , , 1
+		If ErrorLevel
+		{
+			MsgBox, 8208, Error, WinWaitActive Timed Out, cancelling
+			return
+		}
+	} else {
+		MsgBox, 8208, Not Running, 3CX is not running, cancelling
 		return
 	}
-} else {
-	MsgBox, 8208, Not Running, 3CX is not running, cancelling
-	return
+
+	Click, 225, 95									; clicks in textbox
+	SendInput, ^a{Delete}							; selects all and clears text
+
+	if paste
+	{
+		SendInput, ^v
+	}
+
+return
 }
 
-Click, 225, 95									; clicks in textbox
-SendInput, ^a{Delete}							; selects all and clears text
+#SingleInstance, force
+
+^!\:: 											; ctrl+alt+\ switches to 3CX and readies it for number entry (if on number page)
+
+	3CXFocus()
+
+return
+
+F11::												; copy text in active window and paste into 3CX
+
+	SendInput, {End}+{Home}^c
+
+	Sleep, 500
+
+	3CXFocus(1)
 
 return
