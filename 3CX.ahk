@@ -1,4 +1,6 @@
-^!\:: 											; ctrl+alt+\ switches to 3CX and readies it for number entry (if on number page)	
+^!\:: 											; ctrl+alt+\ switches to 3CX and readies it for number entry (if on number page)
+#SingleInstance, force
+
 if WinExist("ahk_exe 3CXWin8Phone.exe")
 {
 	winid := WinExist("ahk_exe 3CXWin8Phone.exe")
