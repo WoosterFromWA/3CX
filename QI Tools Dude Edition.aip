@@ -129,7 +129,7 @@
     <ROW Action="AI_SETMIXINSTLOCATION" Type="1" Source="aicustact.dll" Target="MixedAllUsersInstallLocation"/>
     <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
     <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
-    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]" MultiBuildTarget="DefaultBuild:[AI_UserProgramFiles][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
     <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
     <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
   </COMPONENT>
@@ -138,7 +138,9 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIniFileComponent">
     <ROW IniFile="URL" FileName="CHECKF~1.URL|Check for New Version.url" DirProperty="QITools_Dir" Section="InternetShortcut" Key="URL" Value="https://github.com/WoosterFromWA/3CX/releases/latest" Action="0" Component_="ProductInformation"/>
+    <ROW IniFile="URL_1" FileName="Releases.url" DirProperty="CX_Dir" Section="InternetShortcut" Key="URL" Value="https://github.com/WoosterFromWA/3CX/releases" Action="0" Component_="CX"/>
     <ROW IniFile="WorkingDirectory" FileName="CHECKF~1.URL|Check for New Version.url" DirProperty="QITools_Dir" Section="InternetShortcut" Key="WorkingDirectory" Value="[QITools_Dir]" Action="0" Component_="ProductInformation"/>
+    <ROW IniFile="WorkingDirectory_1" FileName="Releases.url" DirProperty="CX_Dir" Section="InternetShortcut" Key="WorkingDirectory" Value="[CX_Dir]" Action="0" Component_="CX"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
     <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
