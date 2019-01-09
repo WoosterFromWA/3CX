@@ -1,4 +1,4 @@
-3CXFocus(paste:=0)
+3CXFocus(paste:=0)									; function that actually does stuff... defaults to just clearing any existing input
 {
 	if WinExist("ahk_exe 3CXWin8Phone.exe")
 	{
@@ -20,12 +20,13 @@
 		return
 	}
 
-	Click, 225, 95									; clicks in textbox
-	SendInput, ^a{Delete}							; selects all and clears text
+	Sleep, 500
+
+	SendInput, {Esc}								; clear text from 3CX window
 
 	if paste
 	{
-		SendInput, ^v
+		SendInput, ^v 								; send copied text if 'paste' value is set
 	}
 
 return
@@ -33,7 +34,8 @@ return
 
 #SingleInstance, force
 
-^!\:: 											; ctrl+alt+\ switches to 3CX and readies it for number entry (if on number page)
+^!\:: 												; ctrl+alt+\ switches to 3CX and readies it for number entry (if on number page)
+F12::
 
 	3CXFocus()
 
@@ -41,9 +43,7 @@ return
 
 F11::												; copy text in active window and paste into 3CX
 
-	SendInput, {End}+{Home}^c
-
-	Sleep, 500
+	SendInput, {End}+{Home}^c 						; select all text in active box
 
 	3CXFocus(1)
 

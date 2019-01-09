@@ -6,8 +6,6 @@ This is a compiled [AutoHotKey](https://autohotkey.com/ "AutoHotKey's Homepage")
 
 Simply press CTRL+ALT+\ (the one above the Enter key) to switch to the open 3CX window and clear any existing number and get ready to input a number.
 
-__Dude Edition__ uses F12 instead for this command is designed to work on a 1920x1080 display with 125% scaline.
-
 ### New Functionality
 Ability to copy-paste text into 3CX. Same restrictions apply (see below)
 
