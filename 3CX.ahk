@@ -45,6 +45,6 @@ F11::												; copy text in active window and paste into 3CX
 
 	SendInput, {End}+{Home}^c 						; select all text in active box
 
-	3CXFocus(1)
+	SendInput, ^+!{F11}								; use a built-in hotkey in 3CX to copy clipboard, much simpler but more setup
 
 return
